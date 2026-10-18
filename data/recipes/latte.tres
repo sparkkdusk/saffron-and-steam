@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://c8wox06k0teko"]
+
+[ext_resource type="Script" uid="uid://cdt2y42h64bn1" path="res://scripts/recipes/recipe.gd" id="1_c8x2n"]
+
+[resource]
+script = ExtResource("1_c8x2n")
+id = &"latte"
+display_name = "Latte"
+short_name = "Latte"
+steps = Array[StringName]([&"cup", &"brew_espresso", &"add_milk"])
+base_price = 5
+metadata/_custom_type_script = "uid://cdt2y42h64bn1"

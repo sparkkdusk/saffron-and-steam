@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://n275i8vtsnjb"]
+
+[ext_resource type="Script" uid="uid://bx2mbxidp2ca7" path="res://scripts/customers/customer.gd" id="1_h1lfo"]
+[ext_resource type="Script" uid="uid://i2lrv63n11q0" path="res://scripts/characters/character_placeholder.gd" id="2_tbamw"]
+[ext_resource type="Script" uid="uid://kamaloyhpwgb" path="res://scripts/customers/order_bubble.gd" id="3_lc1ie"]
+[ext_resource type="PackedScene" uid="uid://r1vh1nwmycov" path="res://scenes/cafe/interactable.tscn" id="4_rh05d"]
+
+[node name="Customer" type="Node2D" unique_id=1173976101]
+script = ExtResource("1_h1lfo")
+
+[node name="Visual" type="Node2D" parent="." unique_id=753924558]
+script = ExtResource("2_tbamw")
+
+[node name="Hit" parent="." unique_id=336264655 instance=ExtResource("4_rh05d")]
+position = Vector2(0, -55)
+station_id = &"customer"
+size = Vector2(64, 110)
+
+[node name="Bubble" type="Node2D" parent="." unique_id=542390214]
+position = Vector2(0, -142)
+script = ExtResource("3_lc1ie")

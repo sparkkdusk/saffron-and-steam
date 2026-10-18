@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://dikkf2dxsrite"]
+
+[ext_resource type="Script" uid="uid://cdt2y42h64bn1" path="res://scripts/recipes/recipe.gd" id="1_b7sav"]
+
+[resource]
+script = ExtResource("1_b7sav")
+id = &"strawberry_matcha"
+display_name = "Strawberry Matcha"
+short_name = "Matcha"
+steps = Array[StringName]([&"cup", &"add_matcha", &"add_milk", &"add_strawberry"])
+base_price = 6
+drink_color = Color(0.31123915, 0.39125857, 0.20422181, 1)
+metadata/_custom_type_script = "uid://cdt2y42h64bn1"

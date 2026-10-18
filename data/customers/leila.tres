@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CustomerProfile" format=3 uid="uid://qruse44e3h8u"]
+
+[ext_resource type="Script" uid="uid://b38vx1pv44luf" path="res://scripts/recipes/customer_profile.gd" id="1_r8fl5"]
+
+[resource]
+script = ExtResource("1_r8fl5")
+id = &"leila"
+display_name = "Leila"
+personality = "generous"
+favorite_recipe = &"double_espresso"
+hair_color = Color(0, 0, 0, 1)
+accent_color = Color(0.8769742, 0.6143227, 0.5132015, 1)
+metadata/_custom_type_script = "uid://b38vx1pv44luf"

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b513xatynjykl"]
+
+[ext_resource type="Script" uid="uid://dq2m7ip2r7q2p" path="res://scripts/characters/barista.gd" id="1_2veee"]
+[ext_resource type="Script" uid="uid://i2lrv63n11q0" path="res://scripts/characters/character_placeholder.gd" id="2_x5ufn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2veee"]
+
+[node name="Barista" type="Node2D" unique_id=625856933]
+position = Vector2(214, 172)
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_2veee")
+
+[node name="Visual" type="Node2D" parent="." unique_id=307916824]
+script = ExtResource("2_x5ufn")
+facing_back = false
+
+[node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1947438266]
+sprite_frames = SubResource("SpriteFrames_2veee")
+centered = false
+offset = Vector2(-28, -72)

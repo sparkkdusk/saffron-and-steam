@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://cpnq8hoekhv4u"]
+
+[ext_resource type="Script" uid="uid://bevb6u6odg271" path="res://scripts/cafe/art_setup.gd" id="2_gpmh1"]
+[ext_resource type="Texture2D" uid="uid://2qncw8cbfmu8" path="res://assets/backgrounds/cafe_full.png" id="15_r2njn"]
+[ext_resource type="Script" uid="uid://cappvn2tu7ipe" path="res://scripts/cafe/ambient.gd" id="amb"]
+[ext_resource type="PackedScene" uid="uid://b513xatynjykl" path="res://scenes/characters/barista.tscn" id="barista"]
+[ext_resource type="Script" uid="uid://boau6v6enguns" path="res://scripts/cafe/cafe.gd" id="cafe"]
+[ext_resource type="Script" uid="uid://ckl12xg5fdyv3" path="res://scripts/customers/customer_manager.gd" id="cm"]
+[ext_resource type="Script" uid="uid://l8o4u1uob3e1" path="res://scripts/cafe/cup_visual.gd" id="cup"]
+[ext_resource type="PackedScene" uid="uid://n275i8vtsnjb" path="res://scenes/customers/customer.tscn" id="customer"]
+[ext_resource type="Script" uid="uid://b8fnhom2c2vlm" path="res://scripts/cafe/drink_builder.gd" id="db"]
+[ext_resource type="Script" uid="uid://c2ay8jraoviuc" path="res://scripts/cafe/decor_item.gd" id="decor"]
+[ext_resource type="Script" uid="uid://dskay07kdiaql" path="res://scripts/ui/hud.gd" id="hud"]
+[ext_resource type="PackedScene" uid="uid://r1vh1nwmycov" path="res://scenes/cafe/interactable.tscn" id="int"]
+[ext_resource type="Script" uid="uid://dwayq6yvu2wgs" path="res://scripts/cafe/order_manager.gd" id="om"]
+[ext_resource type="Script" uid="uid://w5tbq0g5lpog" path="res://scripts/ui/pause_menu.gd" id="pause"]
+[ext_resource type="Script" uid="uid://ctatmwwf5ccx2" path="res://scripts/cafe/placeholder_sprite.gd" id="ph"]
+
+[node name="Cafe" type="Node2D" unique_id=1094111946]
+script = ExtResource("cafe")
+
+[node name="ArtSetup" type="Node2D" parent="." unique_id=1895894528]
+script = ExtResource("2_gpmh1")
+
+[node name="Background" type="Node2D" parent="." unique_id=648213271]
+
+[node name="Wall" type="Node2D" parent="Background" unique_id=1457414093]
+position = Vector2(213, 84)
+script = ExtResource("ph")
+size = Vector2(426, 168)
+color = Color(0.541, 0.353, 0.204, 1)
+
+[node name="ShelfUnit" type="Node2D" parent="Background" unique_id=1208087014]
+position = Vector2(201, 99)
+script = ExtResource("ph")
+size = Vector2(166, 146)
+color = Color(0.227, 0.141, 0.094, 1)
+label = "shelves"
+
+[node name="WallRug" type="Node2D" parent="Background" unique_id=1971786678]
+position = Vector2(28, 91)
+script = ExtResource("ph")
+size = Vector2(32, 168)
+color = Color(0.643, 0.196, 0.157, 1)
+label = "rug"
+
+[node name="Tapestry" type="Node2D" parent="Background" unique_id=630199510]
+position = Vector2(62, 28)
+script = ExtResource("ph")
+size = Vector2(19, 41)
+color = Color(0.141, 0.204, 0.416, 1)
+
+[node name="Bookshelf" type="Node2D" parent="Background" unique_id=159075260]
+position = Vector2(72, 141)
+script = ExtResource("ph")
+size = Vector2(52, 60)
+color = Color(0.29, 0.173, 0.11, 1)
+label = "books"
+
+[node name="Niche" type="Node2D" parent="Background" unique_id=204336337]
+position = Vector2(72, 76)
+script = ExtResource("ph")
+size = Vector2(44, 60)
+color = Color(0.416, 0.259, 0.157, 1)
+
+[node name="Chalkboard" type="Node2D" parent="Background" unique_id=1374455871]
+position = Vector2(326, 62)
+script = ExtResource("ph")
+size = Vector2(76, 104)
+color = Color(0.11, 0.141, 0.133, 1)
+label = "menu"
+
+[node name="Window" type="Node2D" parent="Background" unique_id=1047864289]
+position = Vector2(397, 78)
+script = ExtResource("ph")
+size = Vector2(58, 144)
+color = Color(0.878, 0.565, 0.627, 1)
+label = "window"
+
+[node name="Cabinet" type="Node2D" parent="Background" unique_id=588555678]
+position = Vector2(325, 151)
+script = ExtResource("ph")
+size = Vector2(66, 50)
+color = Color(0.11, 0.29, 0.306, 1)
+
+[node name="PastryCase" type="Node2D" parent="Background" unique_id=1644406469]
+position = Vector2(376, 173)
+script = ExtResource("ph")
+size = Vector2(100, 62)
+color = Color(0.227, 0.157, 0.11, 1)
+label = "pastries"
+
+[node name="CounterTop" type="Node2D" parent="Background" unique_id=278943091]
+position = Vector2(213, 180)
+script = ExtResource("ph")
+size = Vector2(426, 24)
+color = Color(0.541, 0.353, 0.196, 1)
+
+[node name="Runner" type="Node2D" parent="Background" unique_id=1492225226]
+position = Vector2(205, 181)
+script = ExtResource("ph")
+size = Vector2(270, 18)
+color = Color(0.478, 0.118, 0.141, 1)
+
+[node name="CounterFront" type="Node2D" parent="Background" unique_id=1056457441]
+position = Vector2(213, 216)
+script = ExtResource("ph")
+size = Vector2(426, 48)
+color = Color(0.29, 0.173, 0.11, 1)
+
+[node name="ReferenceOverlay" type="Sprite2D" parent="." unique_id=572357286]
+modulate = Color(1, 1, 1, 0.5)
+z_index = 100
+centered = false
+
+[node name="Barista" parent="." unique_id=589684340 instance=ExtResource("barista")]
+position = Vector2(225.075, 195)
+
+[node name="CupVisual" type="Node2D" parent="." unique_id=1321093285]
+z_index = 3
+position = Vector2(214, 168)
+script = ExtResource("cup")
+
+[node name="Stations" type="Node2D" parent="." unique_id=30290507]
+
+[node name="CupStack" parent="Stations" unique_id=360444595 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(163, 158)
+station_id = &"cup_stack"
+display_name = "Cup stack"
+size = Vector2(14, 20)
+
+[node name="Visual" type="Node2D" parent="Stations/CupStack" unique_id=1914025745]
+script = ExtResource("ph")
+size = Vector2(12, 18)
+color = Color(0.957, 0.918, 0.816, 1)
+
+[node name="MilkJug" parent="Stations" unique_id=1400760039 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(183, 158)
+station_id = &"milk_jug"
+display_name = "Milk jug"
+size = Vector2(14, 20)
+
+[node name="Visual" type="Node2D" parent="Stations/MilkJug" unique_id=6169551]
+script = ExtResource("ph")
+size = Vector2(12, 18)
+color = Color(0.784, 0.784, 0.8, 1)
+
+[node name="MatchaTin" parent="Stations" unique_id=691112209 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(203, 158)
+station_id = &"matcha_tin"
+display_name = "Matcha tin"
+size = Vector2(14, 20)
+
+[node name="Visual" type="Node2D" parent="Stations/MatchaTin" unique_id=691979961]
+script = ExtResource("ph")
+size = Vector2(12, 18)
+color = Color(0.478, 0.635, 0.29, 1)
+
+[node name="StrawberrySyrup" parent="Stations" unique_id=1258749374 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(233, 158)
+station_id = &"strawberry_syrup"
+display_name = "Strawberry syrup"
+size = Vector2(12, 20)
+
+[node name="Visual" type="Node2D" parent="Stations/StrawberrySyrup" unique_id=851458758]
+script = ExtResource("ph")
+size = Vector2(10, 18)
+color = Color(0.878, 0.471, 0.533, 1)
+
+[node name="TrashBin" parent="Stations" unique_id=1352880839 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(253, 158)
+station_id = &"trash_bin"
+display_name = "Pour out (right-click)"
+size = Vector2(12, 20)
+
+[node name="Visual" type="Node2D" parent="Stations/TrashBin" unique_id=156902972]
+script = ExtResource("ph")
+size = Vector2(10, 18)
+color = Color(0.416, 0.416, 0.439, 1)
+
+[node name="ServeZone" parent="Stations" unique_id=929501197 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(278, 160)
+station_id = &"serve_zone"
+display_name = "Serve tray"
+size = Vector2(34, 16)
+
+[node name="Visual" type="Node2D" parent="Stations/ServeZone" unique_id=1445959127]
+script = ExtResource("ph")
+size = Vector2(32, 14)
+color = Color(0.91, 0.722, 0.298, 1)
+
+[node name="EspressoMachine" parent="Stations" unique_id=1316088384 instance=ExtResource("int")]
+z_index = 6
+position = Vector2(320, 144)
+station_id = &"espresso_machine"
+display_name = "Espresso machine"
+size = Vector2(46, 52)
+
+[node name="Visual" type="Node2D" parent="Stations/EspressoMachine" unique_id=425706156]
+script = ExtResource("ph")
+size = Vector2(44, 50)
+color = Color(0.18, 0.478, 0.478, 1)
+
+[node name="Decor" type="Node2D" parent="." unique_id=129596799]
+
+[node name="PlantDecor" type="Node2D" parent="Decor" unique_id=443255576]
+position = Vector2(36, 150)
+script = ExtResource("decor")
+decor_id = &"plant"
+
+[node name="Visual" type="Node2D" parent="Decor/PlantDecor" unique_id=1255872311]
+script = ExtResource("ph")
+size = Vector2(16, 28)
+color = Color(0.29, 0.486, 0.212, 1)
+
+[node name="LanternDecor" type="Node2D" parent="Decor" unique_id=711320907]
+position = Vector2(62, 172)
+script = ExtResource("decor")
+decor_id = &"lantern"
+
+[node name="Visual" type="Node2D" parent="Decor/LanternDecor" unique_id=763943306]
+script = ExtResource("ph")
+size = Vector2(14, 22)
+color = Color(0.941, 0.784, 0.376, 1)
+
+[node name="CatDecor" type="Node2D" parent="Decor" unique_id=1440644935]
+position = Vector2(340, 124)
+script = ExtResource("decor")
+decor_id = &"cat"
+
+[node name="Visual" type="Node2D" parent="Decor/CatDecor" unique_id=1194467572]
+script = ExtResource("ph")
+size = Vector2(22, 12)
+color = Color(0.878, 0.627, 0.376, 1)
+
+[node name="Ambient" type="Node2D" parent="." unique_id=1167797882]
+script = ExtResource("amb")
+
+[node name="CustomerSlots" type="Node2D" parent="." unique_id=492582696]
+
+[node name="Slot1" type="Marker2D" parent="CustomerSlots" unique_id=165249741]
+position = Vector2(128, 240)
+
+[node name="Customers" type="Node2D" parent="." unique_id=582072518]
+z_index = 10
+
+[node name="Managers" type="Node" parent="." unique_id=480626637]
+
+[node name="OrderManager" type="Node" parent="Managers" unique_id=1869929016]
+script = ExtResource("om")
+
+[node name="DrinkBuilder" type="Node" parent="Managers" unique_id=819243036]
+script = ExtResource("db")
+
+[node name="CustomerManager" type="Node" parent="Managers" unique_id=743411484]
+script = ExtResource("cm")
+customer_scene = ExtResource("customer")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1853461627]
+script = ExtResource("hud")
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=870139878]
+script = ExtResource("pause")
+
+[node name="CounterForeground" type="Sprite2D" parent="." unique_id=525993928]
+z_index = 5
+position = Vector2(0, 161.667)
+texture = ExtResource("15_r2njn")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 161.66667, 426, 78.33333)

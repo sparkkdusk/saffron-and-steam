@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomerProfile" format=3 uid="uid://c7l28e4s80spj"]
+
+[ext_resource type="Script" uid="uid://b38vx1pv44luf" path="res://scripts/recipes/customer_profile.gd" id="1_m65oi"]
+
+[resource]
+script = ExtResource("1_m65oi")
+id = &"amira"
+display_name = "Amira"
+favorite_recipe = &"espresso"
+metadata/_custom_type_script = "uid://b38vx1pv44luf"

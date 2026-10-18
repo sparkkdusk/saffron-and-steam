@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CustomerProfile" format=3 uid="uid://d4ctwoljqiuo5"]
+
+[ext_resource type="Script" uid="uid://b38vx1pv44luf" path="res://scripts/recipes/customer_profile.gd" id="1_wnqq5"]
+
+[resource]
+script = ExtResource("1_wnqq5")
+id = &"sam"
+display_name = "Sam"
+personality = "shy"
+patience_seconds = 60.0
+favorite_recipe = &"latte"
+metadata/_custom_type_script = "uid://b38vx1pv44luf"
